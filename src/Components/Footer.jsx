@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import { mobile } from '../ResponsiveSetup';
+import logo2 from '../assets/logo2.png'
 
 const Container = styled.div`
     display:grid;
     background-color: #434d56;
     min-width: max-content;
     grid-template-columns: 20rem 30rem;
-    /* color:white; */
+    color:white;
     min-height:10rem;
     margin: 1rem 8.5rem 0rem 8.5rem;
     padding:2rem 0rem 0rem 4rem;
@@ -23,8 +23,10 @@ const Container = styled.div`
 }
 `;
 
-const Logo = styled.div`
+const Logo = styled.img`
     display: grid;
+   height: 5rem;
+    width: 5rem;
 `;
 const ContactMe = styled.div`
 display: grid;
@@ -32,20 +34,21 @@ grid-template-rows: 4rem 3rem 2rem ;
 
 
 .link{
-   color: black;
+   color: white;
    text-decoration: none;
    word-wrap: break-word;
 }
 `;
 const Footer = () => {
     return <Container>
-        <Logo>
-            <h3>Logo</h3>
+        <Logo
+            src={logo2}
+            alt='logo'>
         </Logo>
         <ContactMe>
             <h4>Contact Me</h4>
-            <Link className='link' to='mailto:DFJ.counselling@gmail.com'>email:DFJ.counselling@gmail.com</Link>
-            <Link className='link' to='tel:1234567890'>1234567890</Link>
+            <Link className='link' to='mailto:DFJ.counselling@gmail.com'>email: DFJ.counselling@gmail.com</Link>
+            <Link className='link' to='tel:1234567890'> Phone: 1234567890</Link>
         </ContactMe>
     </Container>
 }

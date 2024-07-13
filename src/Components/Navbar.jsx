@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import HamMenu from './HamMenu';
 import { mobile } from '../ResponsiveSetup';
 import { Link } from 'react-router-dom';
-
-
+import logo from '../assets/logo.png'
+import Don from '../assets/Don.png'
 
 const MenuBar = styled.div`
-border: 1px solid black ;
+/* border: 1px solid black ; */
 height:10rem;
 width:100%;
 display:grid;
@@ -21,7 +21,10 @@ font-family: "Josefin Sans", sans-serif;
    grid-template-columns: auto;
 } */
 `;
-const Logo = styled.div`   
+const Logo = styled.img`   
+    min-height: 10rem;
+    width:10rem;
+
 `
 const Navmenu = styled.div`
 display:grid;
@@ -33,6 +36,7 @@ justify-content: center;
 };
 .About{
     text-decoration: none;
+    
 };
 ${mobile({
     display: 'none'
@@ -52,10 +56,10 @@ const Navbar = () => {
 
 
     return <MenuBar>
-        <Logo>Logo</Logo>
+        <Link to='/'><Logo src={logo} alt='logo'></Logo></Link>
+
         <Navmenu>
-            <Link className='Home' to='/'>Home</Link>
-            <Link className='About' to='/about'>About</Link>
+            {window.location.pathname === '/about' ? <Link className='Home' to='/'>Home</Link> : <Link className='About' to='/about'>About</Link>}
         </Navmenu>
         <HamBar><HamMenu /></HamBar>
     </MenuBar>
