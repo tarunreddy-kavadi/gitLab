@@ -7,15 +7,27 @@ export const Review_Data = [
     },
     {
         id: 2,
-        customer: 'rema',
+        customer: 'Sarah',
         rating: '⭐⭐⭐⭐⭐',
-        review: '‘Don really challenged some of the misconceptions I had about myself – I feel so much better about myself now’'
+        review: '"Don really helped me understand my anxiety better. I feel much calmer and more in control now."'
     },
     {
         id: 3,
-        customer: 'chris',
+        customer: 'Alex ',
         rating: '⭐⭐⭐⭐⭐',
-        review: '‘Don really challenged some of the misconceptions I had about myself – I feel so much better about myself now’'
+        review: `Don's sessions were a game- changer.I've struggled with depression for years, but I'm finally starting to see the light at the end of the tunnel.'`
+    },
+    {
+        id: 4,
+        customer: 'Emily',
+        rating: '⭐⭐⭐⭐⭐',
+        review: `"I was going through a tough breakup and Don helped me navigate the emotional rollercoaster. I feel so much stronger now."`
+    },
+    {
+        id: 5,
+        customer: 'Olivia ',
+        rating: '⭐⭐⭐⭐⭐',
+        review: `"I was hesitant about therapy, but Don made the process feel natural and supportive. I've gained a new perspective on life."`
     }
 
 ];
@@ -39,19 +51,23 @@ export const FaqData = [
     },
     {
         id: 3,
-        question: `What can I expect during a psychology consultation? `,
-        answer: <p><ul><li>A psychology consultation typically involves an initial meeting where the psychologist will gather information about your background, concerns, and goals.</li>
-            <li> This may involve interviews, questionnaires, and psychological testing.</li>
-            <li> psychologist will then discuss their assessment and recommendations for further treatment or support.</li></ul></p>
+        question: `What can I expect during the Initial Assessment ?`,
+        answer: <p><ul><li>An Initial Assessment typically involves an initial meeting where I will gather information
+            about your background, concerns, and goals.</li>
+            <li> I may ask you questions about your childhood, your parents and any adverse experiences
+                you may have had.</li>
+            <li> I will then discuss your assessment and recommendations for therapy.</li></ul></p>
     },
     {
         id: 4,
-        question: `How much does a psychology consultation cost?`,
-        answer: <p><ul><li>The cost of a consultation can vary depending on the psychologist's experience, location, and insurance coverage. Be sure to ask about fees upfront.</li></ul></p>
+        question: `How much does an Initial Assessment cost ?`,
+        answer: <p><ul><li>The cost of the assessment is £45, it is payable directly after the assessment has taken
+            place</li></ul></p>
     },
     {
-        id: 4,
+        id: 5,
         question: `Is therapy confidential?`,
-        answer: <p><ul><li>Yes, therapy is confidential with some exceptions. The psychologist will explain these exceptions during the consultation, such as danger to yourself or others, or reporting suspected child abuse.</li></ul></p>
+        answer: <p><ul><li>Yes, therapy is confidential with some very rare exceptions. I will explain these exceptions
+            during the consultation, e.g. if I believe you are a danger to yourself or to others.</li></ul></p>
     }
 ]

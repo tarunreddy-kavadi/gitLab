@@ -246,7 +246,18 @@ const About = () => {
             <br /> <br />My approach is deeply client-centered. You are the expert on your own life, and your goals and needs will guide our sessions together. I see myself as a supportive guide, walking alongside you as you navigate your unique experiences. We'll work collaboratively to cultivate self-awareness, helping you identify your inherent strengths, values, and resources.  This journey of self-discovery unfolds within a safe and respectful space, free from judgment. Here, you can explore your thoughts and feelings honestly, knowing you're heard and valued.</h3>
         </Para1>
         <Para2>
-          <h3>I utilize a variety of evidence-based techniques tailored to your individual needs. This might involve approaches like Cognitive Behavioral Therapy (CBT) to manage unhelpful thought patterns, or mindfulness practices for stress reduction. Together, we'll develop strategies and tools that empower you to navigate life's challenges with greater confidence and clarity. If you're struggling with anxiety, depression, relationship issues, or simply seeking a deeper understanding of yourself, I invite you to take the first step towards a more fulfilling life. Let's schedule a free consultation to discuss your needs and how I can support you on your journey. Remember, you have the inherent ability to overcome obstacles and flourish. Together, we can unveil your inner strength and empower you to chart your course towards a brighter future.</h3>
+          <h3>I utilize a variety of evidence-based techniques tailored to your individual needs. This might
+            involve approaches like Cognitive Behavioural Therapy (CBT) to manage unhelpful thought
+            patterns, or mindfulness practices for stress reduction or Psychodynamic practices which
+            look deep into your past or a humanistic approach which closely examines the ‘here and
+            now’. Together, we'll develop strategies and tools that empower you to navigate life's
+            challenges with greater confidence and clarity. If you're struggling with anxiety, depression,
+            relationship issues, or simply seeking a deeper understanding of yourself, I invite you to take
+
+            the first step towards a more fulfilling life. Let's schedule a free consultation to discuss your
+            needs and how I can support you on your journey. Remember, you have the inherent ability
+            to overcome obstacles and flourish. Together, we can unveil your inner strength and
+            empower you to chart your course towards a brighter future.</h3>
           <img src={Cupboard} alt='Cupboard'></img>
         </Para2>
       </Counselling>

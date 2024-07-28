@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { mobile } from '../ResponsiveSetup';
+import emailjs from '@emailjs/browser'
 
 const Contianer = styled.div`
 
@@ -54,11 +55,7 @@ const Form = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs
-            .sendForm('YOUR_SERVICE_ID', template_jp0sipm, form.current, {
-                publicKey: 'YOUR_PUBLIC_KEY',
-            })
+        emailjs.sendForm('service_prqjbfo', 'template_jp0sipm', form.current, 'C50WHtL1sfXajpayv')
             .then(
                 () => {
                     console.log('SUCCESS!');

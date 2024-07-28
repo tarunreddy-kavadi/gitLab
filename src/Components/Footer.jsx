@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import logo2 from '../assets/logo2.png'
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/PhoneEnabled';
 
 const Container = styled.div`
     display:grid;
@@ -13,8 +15,8 @@ const Container = styled.div`
     margin: 1rem 8.5rem 0rem 8.5rem;
     padding:2rem 0rem 0rem 4rem;
     
-   @media screen and (max-width:930px){
-    grid-template-columns: 6rem 5rem;
+   @media screen and (max-width:1024px){
+    grid-template-columns: 6rem 15rem;
     padding:1rem 0rem 0rem 1rem;
     margin:0rem;
 };
@@ -47,8 +49,8 @@ const Footer = () => {
         </Logo>
         <ContactMe>
             <h4>Contact Me</h4>
-            <Link className='link' to='mailto:DFJ.counselling@gmail.com'>email: DFJ.counselling@gmail.com</Link>
-            <Link className='link' to='tel:1234567890'> Phone: 1234567890</Link>
+            <Link className='link' to='mailto:DFJ.counselling@gmail.com'><EmailIcon style={{ margin: '-0.3rem' }} />   DFJ.counselling@gmail.com</Link>
+            <Link className='link' to='tel:07908 456814'> <PhoneIcon style={{ margin: '-0.3rem' }} />  07908 456814</Link>
         </ContactMe>
     </Container>
 }

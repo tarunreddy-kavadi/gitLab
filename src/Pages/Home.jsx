@@ -11,7 +11,6 @@ const Home = () => {
         <Container >
             <Layout >
                 <Introduction />
-                Jai SreeANJANEYA
             </Layout >
         </Container>
     )

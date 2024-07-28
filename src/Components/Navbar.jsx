@@ -31,6 +31,7 @@ display:grid;
 grid-template-columns: 5rem 5rem;
 align-content: center;
 justify-content: center;
+font-size: 1.5rem;
 .Home{
     text-decoration: none;
 };

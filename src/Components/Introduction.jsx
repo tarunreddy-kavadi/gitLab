@@ -20,14 +20,26 @@ const Container = styled.div`
 const VideoContainer = styled.div`
 /* margin: 0rem 8.5rem 0rem 8.5rem; */
 display: flex;
-justify-content: space-around;
-    h1{
-        left:30%;
-        top:80%;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+
+
+    h1{ 
+        padding:3rem;
         position:absolute;
         z-index:2;
         color:white;
+        width: 50%;
+        text-align: center;
+        font-size:2.5rem;
+
     }
+    p{ 
+        padding:1rem;
+        font-size: 1rem;
+    }
+
 @media screen and (max-width:150px) {
     display: none;
 }
@@ -84,7 +96,7 @@ const AboutMe = styled.div`
       }
     };
    h2{
-    margin:6rem;
+    margin:6rem 6rem 0rem 6rem;
     font-family: "Playwrite NZ", cursive;
     animation-name: ${fadeIn};
     animation-timeline: view();
@@ -99,8 +111,8 @@ const AboutMe = styled.div`
 img{
     padding:3rem;
     border-radius: 30rem;
-height:10rem;
-max-width:10rem
+   height:15rem;
+    max-width:20rem;    
 }
 
 
@@ -113,20 +125,37 @@ ${mobile({
 }
 `;
 const ContactMe = styled(Link)`
-max-width:8rem;
-margin-bottom: 2rem;
-font-size: large;
-padding:.5rem;
-border-radius: 2rem;
-background-color: #abb8c3;
+/* max-width:8rem; */
 border: none;
 text-decoration: none;
-&:hover{
-    background-color: white;
+position: relative;
+h3{
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 0.5px solid black;
+    padding:1rem;
+    z-index: 1;
+    &:hover{
+        & > div {
+            left:0;
+            color:black
+        }
+    }
 }
-
-
 `;
+
+const BackgroundColor = styled.div`
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background-color: #abb8c3;
+    left:-100%;
+    top:0%;
+    transition: left 0.5s ease;
+    z-index:-1;
+      
+`
 
 const ImageContainer = styled.div`
 /* margin: 2rem 8.5rem 20rem 8.5rem; */
@@ -204,28 +233,42 @@ const Introduction = () => {
     return <Container>
         {/* <Responsive min-width={'475px'} /> */}
         <VideoContainer>
-            <h1>Jai SREERAM JAI VERA ANJANEEYA</h1>
+            <h1>Counselling is not an easy option, but with me you will never be alone
+                <p>I look forward to hearing from you</p>
+            </h1>
+
             <VideoBackground loop autoPlay muted>
                 <source src={video} type='video/mp4'></source>
             </VideoBackground>
         </VideoContainer>
         <AboutMe>
             <p>GET IN TOUCH</p>
-            <h2>I do adult & child Counselling to assist you with a wide range of mental health problems.
+            <h2>Hello. My name is Don Jacobs, I wonder what brings you here today. <br />
+                My aim as a therapist is to help you to get from where you are now to where you would like
+                to be.
                 <img src={Don}></img>
             </h2>
-            <ContactMe to='/about'>About Me</ContactMe>
+            <ContactMe to='/about'><h3>About Me <BackgroundColor /></h3> </ContactMe>
         </AboutMe>
         <ImageContainer>
             <ImageBox >
                 <img src={sofa} alt='sofa'></img>
-                <h2>Couple Counselling</h2>
-                <p >Adults seeking treatment for themselves deserve assurance that their psychologist is the right fit. Explore our range of services including EMDR Therapy, Autism & ADHD Assessments, counseling, CBT, and ACT. Reach out today to speak with a clinical director and find the support you need.</p>
+                <h2>Relationship Counselling</h2>
+                <p >Whether you’re trying to work through a problem with your partner or you’re single and want
+                    to explore your feelings about relationships, counselling can make a real difference to you.
+                    Counselling provides a supportive, constructive and confidential environment in which you
+                    can explore your relationship difficulties and talk over ways to address them.
+                    I also use restorative practices to mediate and resolve ongoing conflicts between close
+                    friends, work colleagues or family members.</p>
             </ImageBox>
             <ImageBox>
                 <img src={flowerPot} alt='flowerPot'></img>
                 <h2 >Individual Counselling</h2>
-                <p>Our team of clinicians are dedicated to working with children and young people. With expertise in Autism & ADHD assessments, one-to-one child therapy, counselling, and CBT, we address a spectrum of youth challenges. We actively involve parents in their child’s treatment journey. Learn more about our approach and processes.</p>
+                <p>I specialised in helping people to identify and achieve their personal goals by coping with,
+                    and exploring the issues that cause them distress.
+                    Some or the areas I help with are: Low self-esteem, Career and Personal life guidance,
+                    Childhood trauma, Stress and Anxiety, Depression, Anger management, any Mental Health
+                    Disorders, Grief, Bereavement and Loss including Relationship Breakdown.</p>
             </ImageBox>
         </ImageContainer>
         <TherapyContainer>
@@ -234,17 +277,25 @@ const Introduction = () => {
                 style={{ gridTemplateColumns: '' }}>
                 <img src={desert} alt='desert'></img>
                 <h2>Youth Mentoring</h2>
-                <p >Bridging the Gap Between Therapy and Daily Life: While therapy provides a safe space for in-depth exploration of challenges, youth mentoring offers ongoing support and guidance in young people's everyday lives. Mentors can help young people practice and apply the skills learned in therapy in real-world situations.</p>
+                <p >Sometimes parents (through no fault of their own) struggle to keep their adolescent children
+                    on the right path. Through Mentoring I can help ease the transition from childhood to
+                    adulthood by a mix of support and challenge. ‘It takes a village to bring up a child’…. With
+                    over 30 years’ experience of working with children and young people I will endeavour to
+                    build a developmental relationship in which the young person is inducted into the adult world
+                    of responsibility, rights and resilience.</p>
             </Assessments>
             <Assessments>
                 <img src={door} alt='door'></img>
                 <h2>Grief Counselling</h2>
-                <p>Psychology counselling offers a safe and supportive space for individuals to process grief, fostering healthy coping mechanisms and facilitating the journey towards healing.</p>
+                <p>Counselling offers a safe and supportive space for individuals to process the five stages of
+                    grief: Anger, Denial, Bargaining, Depression and the final stage Acceptance. I endeavour to
+                    foster healthy coping mechanisms and facilitating the journey towards healing.</p>
             </Assessments>
             <Assessments>
                 <img src={mirror} alt='mirror'></img>
                 <h2>Meditation</h2>
-                <p>Psychology counselling may incorporate mindfulness meditation practices to help clients manage stress, increase self-awareness, and promote emotional regulation.</p>
+                <p>My Counselling techniques may incorporate mindfulness meditation and breathing practices
+                    to help clients manage stress, increase self-awareness, and promote emotional regulation.</p>
             </Assessments>
         </TherapyContainer>
         <ContactContainer>
